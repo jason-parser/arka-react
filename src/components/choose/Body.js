@@ -11,7 +11,8 @@ const Body = ({ rooms }) => (
           {rooms.reduce(
             (min, p) => (p.price < min ? p.price : min),
             rooms[0].price
-          )}{"₽ "}
+          )}
+          {"₽ "}
           -{" "}
           {rooms.reduce(
             (max, p) => (p.price > max ? p.price : max),
