@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+
+import Layout from "../components/common/Layout";
+import Body from "../components/details/Body";
 
 const DetailsPage = () => (
-  <div>
-    <h2>Details</h2>
-  </div>
-)
+  <Layout>
+    <div style={{ background: "#fafafa" }}>
+      <Body />
+    </div>
+  </Layout>
+);
 
-export default DetailsPage
+export default DetailsPage;
