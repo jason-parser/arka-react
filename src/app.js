@@ -1,9 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { HashRouter as Router, Route } from "react-router-dom";
 
-import App from './components/App';
+import ListPage from "./pages/list";
+import UserPage from "./pages/user";
+import CartPage from "./pages/cart";
+import ChoosePage from "./pages/choose";
+import DetailsPage from "./pages/details";
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('rooms-page')
+const App = () => (
+  <Router>
+    <div>
+      <Route path="/list" component={ListPage} />
+      <Route path="/details" component={DetailsPage} />
+      <Route path="/choose" component={ChoosePage} />
+      <Route path="/cart" component={CartPage} />
+      <Route path="/user" component={UserPage} />
+    </div>
+  </Router>
 );
+
+export default App;

@@ -7,13 +7,13 @@ import roomsEn from '../data/rooms/en';
 import ru from '../data/translations/ru';
 import en from '../data/translations/en';
 
-import FiltersList from './FiltersList';
-import RoomsList from './RoomsList';
-import Modal from './Modal';
+import FiltersList from '../components/list/FiltersList';
+import RoomsList from '../components/list/RoomsList';
+import Modal from '../components/list/Modal';
 
 moment.locale('ru');
 
-export default class App extends React.Component {
+export default class ListPage extends React.Component {
   constructor(props) {
     super(props);
 
