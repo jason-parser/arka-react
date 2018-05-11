@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import AmountInput from './AmountInput'
+import Button from '../common/Button'
 
 class Inputs extends React.Component {
   state = {
@@ -79,6 +81,11 @@ class Inputs extends React.Component {
               handleDec={this.handleDec}
             />
           </div>
+          <div className="button-wrapper">
+            <Link to="/choose">
+              <Button>Подтвердить</Button>
+            </Link>
+          </div>
         </div>
         <style jsx>{`
           .wrapper {
@@ -109,6 +116,12 @@ class Inputs extends React.Component {
             display: flex;
             align-items: center;
             margin-bottom: 40px;
+          }
+
+          .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
           }
         `}</style>
       </div>
