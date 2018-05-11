@@ -59,6 +59,8 @@ const Room = ({ room }) => (
           background-color: #a2865e;
           padding: 12px 8px;
           border: 1px solid #927954;
+          text-transform: uppercase;
+          font-family: 'Muller', sans-serif;
         }
       }
     `}</style>

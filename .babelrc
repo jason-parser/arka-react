@@ -1,6 +1,18 @@
 {
-  "presets": ["react", "stage-0"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 11"]
+        }
+      }
+    ],
+    "react"
+  ],
   "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
     ["styled-jsx/babel", { "plugins": ["styled-jsx-plugin-sass"] }]
   ]
 }

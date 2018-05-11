@@ -12,6 +12,8 @@ const Button = ({ children }) => (
         transition: all 0.3s ease;
         padding: 12px 48px;
         cursor: pointer;
+        font-family: 'Muller', sans-serif;
+        text-transform: uppercase;
 
         &:hover {
           background-color: #927954;
