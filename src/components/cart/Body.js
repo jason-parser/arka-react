@@ -29,6 +29,8 @@ const Body = ({ rooms }) => (
         padding: 30px;
         padding-top: 60px;
         padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
       }
 
       h1 {

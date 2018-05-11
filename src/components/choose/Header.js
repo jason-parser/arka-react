@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import moment from 'moment'
 
-const Header = () => (
+const Header = ({ guests, checkIn, checkOut }) => (
   <div className="header">
     <div className="container">
       <div className="details">
@@ -12,8 +13,11 @@ const Header = () => (
       </div>
 
       <ul>
-        <li>Гости: 2 взрослых</li>
-        <li>Даты: 10.05.2018 - 20.05.2018</li>
+        <li>Гости: {guests} взрослых</li>
+        <li>
+          Даты: {moment(checkIn).format('DD.MM.YYYY')} -{' '}
+          {moment(checkOut).format('DD.MM.YYYY')}
+        </li>
       </ul>
     </div>
 
