@@ -16,7 +16,7 @@ const RoomsList = ({ rooms }) => (
     <div className="sum">
       <p>К оплате:</p>
       <p className="summary">
-        {rooms.reduce((prev, cur) => prev + cur.price, 0)}₽
+        {rooms.reduce((prev, cur) => prev + cur.price * cur.amount, 0)}₽
       </p>
     </div>
     <style jsx>{`

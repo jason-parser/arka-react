@@ -6,7 +6,7 @@ import FaTrashO from 'react-icons/lib/fa/trash-o'
 const Room = ({ room }) => (
   <li>
     <div className="amount">
-      <span>1</span>
+      <span>{room.amount}</span>
     </div>
     <div className="details">
       <h2>{room.name}</h2>
