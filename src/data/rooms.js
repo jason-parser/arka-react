@@ -59,10 +59,11 @@ export default [
     image: '/wp-content/themes/hotelbooking/img/rooms-page/test1.png',
     name: 'Royal Suit',
     guests: '5 гостей',
-    descr: 'Таким образом новая модель организационной деятельности представляет собой.',
+    descr:
+      'Таким образом новая модель организационной деятельности представляет собой.',
     category: 'c',
     price: 31000,
     services: ['tea', 'shower', 'bath', 'parking'],
     link: '/rooms/royal-suit/'
-  },
-];
+  }
+]

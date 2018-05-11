@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const AmountInput = ({ name, value, handleInc, handleDec }) => (
   <div className="amount-input">
@@ -72,16 +72,16 @@ const AmountInput = ({ name, value, handleInc, handleDec }) => (
       }
     `}</style>
     <style jsx global>{`
-      input[type="number"]::-webkit-outer-spin-button,
-      input[type="number"]::-webkit-inner-spin-button {
+      input[type='number']::-webkit-outer-spin-button,
+      input[type='number']::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
-      input[type="number"] {
+      input[type='number'] {
         -moz-appearance: textfield;
       }
     `}</style>
   </div>
-);
+)
 
-export default AmountInput;
+export default AmountInput

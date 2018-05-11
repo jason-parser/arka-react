@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Room = ({ room }) => (
   <li>
@@ -63,6 +63,6 @@ const Room = ({ room }) => (
       }
     `}</style>
   </li>
-);
+)
 
-export default Room;
+export default Room

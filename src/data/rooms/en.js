@@ -66,5 +66,5 @@ export default [
     price: 31000,
     services: ['tea', 'shower', 'bath', 'parking'],
     link: '/en/rooms/royal-suit-2/'
-  },
-];
+  }
+]

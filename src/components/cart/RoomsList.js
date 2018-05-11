@@ -1,14 +1,16 @@
-import React from "react";
+import React from 'react'
 
-import Room from "./Room";
+import Room from './Room'
 
 const RoomsList = ({ rooms }) => (
   <div>
     <header>
-      <p style={{ width: "15%", textAlign: "center"}}>Количество</p>
-      <p style={{ width: "55%"}}>Детали</p>
-      <p style={{ width: "20%", textAlign: "right", paddingRight: "30px"}}>Цена</p>
-      <p style={{ width: "10%"}}>Удалить</p>
+      <p style={{ width: '15%', textAlign: 'center' }}>Количество</p>
+      <p style={{ width: '55%' }}>Детали</p>
+      <p style={{ width: '20%', textAlign: 'right', paddingRight: '30px' }}>
+        Цена
+      </p>
+      <p style={{ width: '10%' }}>Удалить</p>
     </header>
     <ul>{rooms.map(room => <Room key={room.id} room={room} />)}</ul>
     <style jsx>{`
@@ -30,6 +32,6 @@ const RoomsList = ({ rooms }) => (
       }
     `}</style>
   </div>
-);
+)
 
-export default RoomsList;
+export default RoomsList

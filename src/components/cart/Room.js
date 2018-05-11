@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import FaTrashO from "react-icons/lib/fa/trash-o";
+import FaTrashO from 'react-icons/lib/fa/trash-o'
 
 const Room = ({ room }) => (
   <li>
@@ -17,7 +17,7 @@ const Room = ({ room }) => (
     </div>
     <div className="delete">
       <span>
-        <FaTrashO size={24}  />
+        <FaTrashO size={24} />
       </span>
     </div>
     <style jsx>{`
@@ -72,6 +72,6 @@ const Room = ({ room }) => (
       }
     `}</style>
   </li>
-);
+)
 
-export default Room;
+export default Room

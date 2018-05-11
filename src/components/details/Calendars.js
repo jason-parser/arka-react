@@ -1,33 +1,33 @@
-import React from "react";
-import Calendar from "react-calendar";
-import moment from "moment";
+import React from 'react'
+import Calendar from 'react-calendar'
+import moment from 'moment'
 
 const Calendars = () => {
   const options = {
-    className: "calendar"
-  };
+    className: 'calendar'
+  }
   return (
     <div className="wrapper">
       <Calendar {...options} />
       <Calendar
         {...options}
-        activeStartDate={new Date(moment().add(1, "months"))}
+        activeStartDate={new Date(moment().add(1, 'months'))}
       />
       <Calendar
         {...options}
-        activeStartDate={new Date(moment().add(2, "months"))}
+        activeStartDate={new Date(moment().add(2, 'months'))}
       />
       <Calendar
         {...options}
-        activeStartDate={new Date(moment().add(3, "months"))}
+        activeStartDate={new Date(moment().add(3, 'months'))}
       />
       <Calendar
         {...options}
-        activeStartDate={new Date(moment().add(4, "months"))}
+        activeStartDate={new Date(moment().add(4, 'months'))}
       />
       <Calendar
         {...options}
-        activeStartDate={new Date(moment().add(5, "months"))}
+        activeStartDate={new Date(moment().add(5, 'months'))}
       />
       <style jsx global>{`
         .calendar {
@@ -48,7 +48,7 @@ const Calendars = () => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default Calendars;
+export default Calendars

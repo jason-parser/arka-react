@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Layout = ({ children }) => (
   <React.Fragment>
@@ -21,6 +21,6 @@ const Layout = ({ children }) => (
       }
     `}</style>
   </React.Fragment>
-);
+)
 
-export default Layout;
+export default Layout

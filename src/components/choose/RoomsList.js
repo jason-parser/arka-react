@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import Room from "./Room";
+import Room from './Room'
 
 const RoomsList = ({ rooms }) => (
   <ul>
@@ -13,6 +13,6 @@ const RoomsList = ({ rooms }) => (
       }
     `}</style>
   </ul>
-);
+)
 
-export default RoomsList;
+export default RoomsList

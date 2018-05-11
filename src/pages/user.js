@@ -1,9 +1,12 @@
 import React from 'react'
 
+import Layout from '../components/common/Layout'
+import Body from '../components/user/Body'
+
 const UserPage = () => (
-  <div>
-    <h2>User</h2>
-  </div>
+  <Layout>
+    <Body />
+  </Layout>
 )
 
 export default UserPage

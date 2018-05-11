@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import RoomsList from "./RoomsList";
+import RoomsList from './RoomsList'
 
 const Body = ({ rooms }) => (
   <div className="container">
@@ -12,8 +12,8 @@ const Body = ({ rooms }) => (
             (min, p) => (p.price < min ? p.price : min),
             rooms[0].price
           )}
-          {"₽ "}
-          -{" "}
+          {'₽ '}
+          -{' '}
           {rooms.reduce(
             (max, p) => (p.price > max ? p.price : max),
             rooms[0].price
@@ -48,6 +48,6 @@ const Body = ({ rooms }) => (
       }
     `}</style>
   </div>
-);
+)
 
-export default Body;
+export default Body

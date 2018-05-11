@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import AmountInput from "./AmountInput";
+import AmountInput from './AmountInput'
 
 class Inputs extends React.Component {
   state = {
@@ -8,22 +8,22 @@ class Inputs extends React.Component {
     kids: 0,
     babies: 0,
     rooms: 0
-  };
+  }
 
   handleDec = name => {
     this.setState(prevState => {
       if (prevState[name] > 0)
         return {
           [name]: prevState[name] - 1
-        };
-    });
-  };
+        }
+    })
+  }
 
   handleInc = name => {
     this.setState(prevState => ({
       [name]: prevState[name] + 1
-    }));
-  };
+    }))
+  }
 
   render() {
     return (
@@ -112,8 +112,8 @@ class Inputs extends React.Component {
           }
         `}</style>
       </div>
-    );
+    )
   }
 }
 
-export default Inputs;
+export default Inputs
