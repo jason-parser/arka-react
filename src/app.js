@@ -7,15 +7,19 @@ import CartPage from './pages/cart'
 import ChoosePage from './pages/choose'
 import DetailsPage from './pages/details'
 
+import RestoreScroll from './components/common/RestoreScroll'
+
 const App = () => (
   <Router>
-    <div>
-      <Route path="/list" component={ListPage} />
-      <Route path="/details" component={DetailsPage} />
-      <Route path="/choose" component={ChoosePage} />
-      <Route path="/cart" component={CartPage} />
-      <Route path="/user" component={UserPage} />
-    </div>
+    <RestoreScroll>
+      <div>
+        <Route path="/list" component={ListPage} />
+        <Route path="/details" component={DetailsPage} />
+        <Route path="/choose" component={ChoosePage} />
+        <Route path="/cart" component={CartPage} />
+        <Route path="/user" component={UserPage} />
+      </div>
+    </RestoreScroll>
   </Router>
 )
 

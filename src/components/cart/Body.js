@@ -42,6 +42,7 @@ const Body = ({ rooms }) => (
         display: inline-block;
         margin-left: auto;
         margin-bottom: 60px;
+        margin-right: 50px;
       }
     `}</style>
   </div>

@@ -13,6 +13,12 @@ const RoomsList = ({ rooms }) => (
       <p style={{ width: '10%' }}>Удалить</p>
     </header>
     <ul>{rooms.map(room => <Room key={room.id} room={room} />)}</ul>
+    <div className="sum">
+      <p>К оплате:</p>
+      <p className="summary">
+        {rooms.reduce((prev, cur) => prev + cur.price, 0)}₽
+      </p>
+    </div>
     <style jsx>{`
       header {
         display: flex;
@@ -29,6 +35,19 @@ const RoomsList = ({ rooms }) => (
         margin: 0;
         padding: 0;
         margin-bottom: 60px;
+      }
+
+      .sum {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 50px;
+
+        .summary {
+          font-size: 24px;
+          margin-left: 30px;
+        }
       }
     `}</style>
   </div>
