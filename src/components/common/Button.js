@@ -11,6 +11,7 @@ const Button = ({ children }) => (
         outline: none;
         transition: all 0.3s ease;
         padding: 12px 48px;
+        cursor: pointer;
 
         &:hover {
           background-color: #927954;

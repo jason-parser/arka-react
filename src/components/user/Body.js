@@ -2,7 +2,7 @@ import React from 'react'
 
 import FormPersonal from './FormPersonal'
 import FormAddress from './FormAddress'
-import Button from './Button'
+import Button from '../common/Button'
 
 const Body = ({ rooms }) => (
   <div className="container">

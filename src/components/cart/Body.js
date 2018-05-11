@@ -1,11 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import RoomsList from './RoomsList'
+import Button from '../common/Button'
 
 const Body = ({ rooms }) => (
   <div className="container">
     <h1>Данные бронирования</h1>
     <RoomsList rooms={rooms} />
+
+    <div className="button-wrapper">
+      <Link to="/user">
+        <Button>Подтвердить</Button>
+      </Link>
+    </div>
+
     <p>
       Если Вы не уверены в бронировании, не нажимайте на этой странице
       "Подтвердить". В случае, если Вы подтвердили бронирование, но не оплатили
@@ -25,6 +34,12 @@ const Body = ({ rooms }) => (
       h1 {
         margin-bottom: 40px;
         color: #666;
+      }
+
+      .button-wrapper {
+        display: inline-block;
+        margin-left: auto;
+        margin-bottom: 60px;
       }
     `}</style>
   </div>
