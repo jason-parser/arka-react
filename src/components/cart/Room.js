@@ -46,6 +46,14 @@ const Room = ({ room }) => (
           font-size: 20px;
           margin-bottom: 10px;
         }
+
+        p {
+          display: none;
+
+          @media (min-width: 768px) {
+            display: block;
+          }
+        }
       }
 
       .price {

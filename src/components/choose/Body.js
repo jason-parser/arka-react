@@ -34,7 +34,7 @@ const Body = ({ rooms }) => (
         background: #fff;
         border: 2px solid #f8f8f8;
         padding: 30px;
-        margin-bottom: 100px;
+        padding-bottom: 100px;
       }
 
       header {

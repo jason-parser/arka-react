@@ -26,11 +26,17 @@ const Body = ({ rooms }) => (
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 30px;
-        padding-top: 60px;
-        padding-bottom: 100px;
+        padding: 15px;
+        padding-top: 30px;
+        padding-bottom: 50px;
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 768px) {
+          padding: 30px;
+          padding-top: 60px;
+          padding-bottom: 100px;
+        }
       }
 
       h1 {
