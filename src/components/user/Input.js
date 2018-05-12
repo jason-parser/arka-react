@@ -6,9 +6,14 @@ const Input = ({ width, marginRight, name, value, label }) => (
     <input id={`id-${name}`} type="text" name={name} value={value} />
     <style jsx>{`
       .input {
-        width: ${width};
-        margin-right: ${marginRight};
+        width: 100%;
+        margin-right: 0;
         margin-bottom: 40px;
+
+        @media (min-width: 768px) {
+          width: ${width};
+          margin-right: ${marginRight};
+        }
       }
 
       input {
