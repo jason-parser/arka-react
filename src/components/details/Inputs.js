@@ -89,13 +89,25 @@ class Inputs extends React.Component {
         </div>
         <style jsx>{`
           .wrapper {
-            width: 31%;
+            width: 100%;
+            margin-bottom: 50px;
+
+            @media (min-width: 690px) {
+              width: 31%;
+              min-width: 350px;
+              margin-right: 3%;
+              margin-bottom: 0;
+            }
           }
 
           .form {
             background: #fff;
             border: 2px solid #f8f8f8;
-            padding: 30px;
+            padding: 15px;
+
+            @media (min-width: 481px) {
+              padding: 30px;
+            }
           }
 
           .dates {

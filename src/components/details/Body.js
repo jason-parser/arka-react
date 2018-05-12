@@ -16,9 +16,15 @@ const Body = () => (
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 30px;
-        padding-top: 60px;
-        padding-bottom: 100px;
+        padding: 15px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        @media (min-width: 481px) {
+          padding: 30px;
+          padding-top: 60px;
+          padding-bottom: 100px;
+        }
       }
 
       h1 {
@@ -28,8 +34,12 @@ const Body = () => (
 
       .wrapper {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+
+        @media (min-width: 690px) {
+          flex-direction: row;
+          align-items: flex-start;
+        }
       }
     `}</style>
   </div>
