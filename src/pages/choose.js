@@ -39,6 +39,37 @@ class ChoosePage extends React.Component {
     }
   }
 
+  addToCart = id => {
+    let data = []
+    let newData = []
+
+    if (localStorage.getItem('cart')) {
+      data = [...JSON.parse(localStorage.getItem('cart'))]
+    }
+
+    if (data.filter(room => room.id == id).length > 0) {
+      newData = data.map(
+        room =>
+          room.id == id
+            ? {
+                ...room,
+                amount: room.amount + 1
+              }
+            : room
+      )
+    } else {
+      newData = [
+        ...data,
+        {
+          id,
+          amount: 1
+        }
+      ]
+    }
+
+    localStorage.setItem('cart', JSON.stringify(newData))
+  }
+
   render() {
     return (
       <Layout>
@@ -48,7 +79,7 @@ class ChoosePage extends React.Component {
             checkIn={this.state.checkIn}
             checkOut={this.state.checkOut}
           />
-          <Body rooms={rooms} />
+          <Body rooms={rooms} addToCart={this.addToCart} />
         </div>
       </Layout>
     )

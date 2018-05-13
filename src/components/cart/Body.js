@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import RoomsList from './RoomsList'
 import Button from '../common/Button'
 
-const Body = ({ rooms }) => (
+const Body = ({ rooms, removeFromCart }) => (
   <div className="container">
     <h1>Данные бронирования</h1>
-    <RoomsList rooms={rooms} />
+    <RoomsList rooms={rooms} removeFromCart={removeFromCart} />
 
     <div className="button-wrapper">
       <Link to="/user">

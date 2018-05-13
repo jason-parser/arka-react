@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Room = ({ room }) => (
+const Room = ({ room, addToCart }) => (
   <li>
     <div
       className="image"
@@ -13,7 +13,7 @@ const Room = ({ room }) => (
     </div>
     <div className="action">
       <p>{room.price}₽</p>
-      <Link to="/cart">
+      <Link to="/cart" onClick={() => addToCart(room.id)}>
         <a className="button">Выбрать номер</a>
       </Link>
     </div>

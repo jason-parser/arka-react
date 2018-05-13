@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import FaTrashO from 'react-icons/lib/fa/trash-o'
 
-const Room = ({ room }) => (
+const Room = ({ room, removeFromCart }) => (
   <li>
     <div className="amount">
       <span>{room.amount}</span>
@@ -15,7 +15,7 @@ const Room = ({ room }) => (
     <div className="price">
       <span>{room.price}₽</span>
     </div>
-    <div className="delete">
+    <div className="delete" onClick={() => removeFromCart(room.id)}>
       <span>
         <FaTrashO size={24} />
       </span>

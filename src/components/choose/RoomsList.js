@@ -2,9 +2,11 @@ import React from 'react'
 
 import Room from './Room'
 
-const RoomsList = ({ rooms }) => (
+const RoomsList = ({ rooms, addToCart }) => (
   <ul>
-    {rooms.map(room => <Room key={room.id} room={room} />)}
+    {rooms.map(room => (
+      <Room key={room.id} room={room} addToCart={addToCart} />
+    ))}
     <style jsx>{`
       ul {
         list-style: none;

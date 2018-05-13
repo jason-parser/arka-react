@@ -2,7 +2,7 @@ import React from 'react'
 
 import Room from './Room'
 
-const RoomsList = ({ rooms }) => (
+const RoomsList = ({ rooms, removeFromCart }) => (
   <div>
     <header>
       <p style={{ width: '15%', textAlign: 'center' }}>Кол-во</p>
@@ -14,7 +14,11 @@ const RoomsList = ({ rooms }) => (
         Удалить
       </p>
     </header>
-    <ul>{rooms.map(room => <Room key={room.id} room={room} />)}</ul>
+    <ul>
+      {rooms.map(room => (
+        <Room key={room.id} room={room} removeFromCart={removeFromCart} />
+      ))}
+    </ul>
     <div className="sum">
       <p>К оплате:</p>
       <p className="summary">

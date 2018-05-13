@@ -2,7 +2,7 @@ import React from 'react'
 
 import RoomsList from './RoomsList'
 
-const Body = ({ rooms }) => (
+const Body = ({ rooms, addToCart }) => (
   <div className="container">
     <div className="box">
       <header>
@@ -20,7 +20,7 @@ const Body = ({ rooms }) => (
           )}₽
         </p>
       </header>
-      <RoomsList rooms={rooms} />
+      <RoomsList rooms={rooms} addToCart={addToCart} />
     </div>
 
     <style jsx>{`
