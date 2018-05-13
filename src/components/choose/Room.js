@@ -63,10 +63,10 @@ const Room = ({ room }) => (
 
         @media (min-width: 768px) {
           margin-bottom: 0;
-          text-align-last: left;
+          text-align: left;
 
           h2 {
-            text-align-last: left;
+            text-align: left;
           }
         }
       }
