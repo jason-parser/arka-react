@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
+
+import 'react-datepicker/dist/react-datepicker.css'
 
 import AmountInput from './AmountInput'
 import Button from '../common/Button'
@@ -14,38 +18,58 @@ class Inputs extends React.Component {
 
   handleDec = name => {
     this.setState(prevState => {
-      if (prevState[name] > 0)
-        return {
-          [name]: prevState[name] - 1
-        }
+      if (name == 'adults' && this.props.details.guests > 0)
+        this.props.handleGuests(-1)
+
+      return {
+        [name]: prevState[name] - 1
+      }
     })
   }
 
   handleInc = name => {
+    if (name == 'adults') this.props.handleGuests(1)
+
     this.setState(prevState => ({
       [name]: prevState[name] + 1
     }))
   }
 
   render() {
+    const {
+      details,
+      handleCheckInChange,
+      handleCheckOutChange,
+      handleGuests,
+      handleSubmit
+    } = this.props
+
     return (
       <div className="wrapper">
         <div className="form">
           <div className="dates">
             <label>
               С
-              <input name="start" type="text" value="10.05.2018" />
+              <DatePicker
+                selected={moment(details.checkIn)}
+                onChange={date => handleCheckInChange(date)}
+                className="datepicker"
+              />
             </label>
             <label>
               По
-              <input name="finish" type="text" value="18.05.2018" />
+              <DatePicker
+                selected={moment(details.checkOut)}
+                onChange={date => handleCheckOutChange(date)}
+                className="datepicker"
+              />
             </label>
           </div>
           <div className="input-group">
             <p>Взрослые</p>
             <AmountInput
               name="adults"
-              value={this.state.adults}
+              value={details.guests}
               handleInc={this.handleInc}
               handleDec={this.handleDec}
             />
@@ -82,7 +106,7 @@ class Inputs extends React.Component {
             />
           </div>
           <div className="button-wrapper">
-            <Link to="/choose">
+            <Link to="/choose" onClick={handleSubmit}>
               <Button>Подтвердить</Button>
             </Link>
           </div>
@@ -134,6 +158,11 @@ class Inputs extends React.Component {
             display: flex;
             justify-content: center;
             align-items: flex-start;
+          }
+        `}</style>
+        <style jsx global>{`
+          .datepicker {
+            width: 100%;
           }
         `}</style>
       </div>

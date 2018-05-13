@@ -1,14 +1,69 @@
 import React from 'react'
+import moment from 'moment'
 
 import Layout from '../components/common/Layout'
 import Body from '../components/details/Body'
 
-const DetailsPage = () => (
-  <Layout>
-    <div style={{ background: '#fafafa' }}>
-      <Body />
-    </div>
-  </Layout>
-)
+moment.locale('ru')
+
+class DetailsPage extends React.Component {
+  state = {
+    guests: 1,
+    checkIn: moment(),
+    checkOut: moment().add(1, 'days')
+  }
+
+  componentDidMount() {
+    const json = localStorage.getItem('details')
+
+    if (json) {
+      const details = JSON.parse(json)
+
+      this.setState({
+        guests: parseInt(details.guests, 10),
+        checkIn: moment(details.checkIn),
+        checkOut: moment(details.checkOut)
+      })
+    }
+  }
+
+  handleCheckInChange = date => {
+    this.setState({
+      checkIn: moment(date)
+    })
+  }
+
+  handleCheckOutChange = date => {
+    this.setState({
+      checkOut: moment(date)
+    })
+  }
+
+  handleGuests = inc => {
+    this.setState(prevState => ({
+      guests: prevState.guests + inc
+    }))
+  }
+
+  handleSubmit = () => {
+    localStorage.setItem('details', JSON.stringify(this.state))
+  }
+
+  render() {
+    return (
+      <Layout>
+        <div style={{ background: '#fafafa' }}>
+          <Body
+            details={this.state}
+            handleCheckInChange={this.handleCheckInChange}
+            handleCheckOutChange={this.handleCheckOutChange}
+            handleGuests={this.handleGuests}
+            handleSubmit={this.handleSubmit}
+          />
+        </div>
+      </Layout>
+    )
+  }
+}
 
 export default DetailsPage

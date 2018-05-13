@@ -3,11 +3,23 @@ import React from 'react'
 import Inputs from './Inputs'
 import Calendars from './Calendars'
 
-const Body = () => (
+const Body = ({
+  details,
+  handleCheckInChange,
+  handleCheckOutChange,
+  handleGuests,
+  handleSubmit
+}) => (
   <div className="container">
     <h1>Бронирование / Reservation</h1>
     <div className="wrapper">
-      <Inputs />
+      <Inputs
+        details={details}
+        handleCheckInChange={handleCheckInChange}
+        handleCheckOutChange={handleCheckOutChange}
+        handleGuests={handleGuests}
+        handleSubmit={handleSubmit}
+      />
       <Calendars />
     </div>
 

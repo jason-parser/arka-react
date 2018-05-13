@@ -1,5 +1,4 @@
 import React from 'react'
-import queryString from 'query-string'
 import moment from 'moment'
 
 import Layout from '../components/common/Layout'
@@ -18,23 +17,15 @@ class ChoosePage extends React.Component {
   }
 
   componentDidMount() {
-    const parsed = queryString.parse(location.search)
+    const json = localStorage.getItem('details')
 
-    if (parsed.nd_booking_archive_form_guests) {
-      this.setState({
-        guests: parseInt(parsed.nd_booking_archive_form_guests, 10)
-      })
-    }
+    if (json) {
+      const details = JSON.parse(json)
 
-    if (parsed.nd_booking_archive_form_date_range_from) {
       this.setState({
-        checkIn: moment(parsed.nd_booking_archive_form_date_range_from)
-      })
-    }
-
-    if (parsed.nd_booking_archive_form_date_range_to) {
-      this.setState({
-        checkOut: moment(parsed.nd_booking_archive_form_date_range_to)
+        guests: parseInt(details.guests, 10),
+        checkIn: moment(details.checkIn),
+        checkOut: moment(details.checkOut)
       })
     }
   }
