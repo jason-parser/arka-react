@@ -23,7 +23,6 @@ const Room = ({ room, addToCart }) => (
         padding: 20px 0;
         border-top: 2px solid #f8f8f8;
         margin-bottom: 20px;
-        padding-left: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,6 +30,7 @@ const Room = ({ room, addToCart }) => (
         @media (min-width: 768px) {
           flex-direction: row;
           align-items: flex-start;
+          padding-left: 20px;
         }
       }
 

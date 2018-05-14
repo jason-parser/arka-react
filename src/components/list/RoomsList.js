@@ -42,6 +42,18 @@ const RoomsList = ({ state, translations, selectRoom }) => (
           />
         )
       })}
+    <style jsx>{`
+      .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-bottom: 88px;
+      }
+    `}</style>
   </ul>
 )
 

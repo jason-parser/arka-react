@@ -1,5 +1,7 @@
 import React from 'react'
 
+import GlobalStyles from './GlobalStyles'
+
 const Layout = ({ children }) => (
   <React.Fragment>
     <div
@@ -18,8 +20,10 @@ const Layout = ({ children }) => (
 
       .main-wrapper {
         position: relative;
+        overflow: hidden;
       }
     `}</style>
+    <GlobalStyles />
   </React.Fragment>
 )
 
