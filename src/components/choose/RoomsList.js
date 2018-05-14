@@ -1,17 +1,22 @@
 import React from 'react'
 
-import Room from './Room'
+import RoomsListItem from './RoomsListItem'
 
 const RoomsList = ({ rooms, addToCart }) => (
-  <ul>
-    {rooms.map(room => (
-      <Room key={room.id} room={room} addToCart={addToCart} />
-    ))}
+  <ul className="list">
+    {rooms.map((room, index) => {
+      return <RoomsListItem room={room} key={index} addToCart={addToCart} />
+    })}
     <style jsx>{`
-      ul {
-        list-style: none;
+      .list {
         margin: 0;
         padding: 0;
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-bottom: 88px;
       }
     `}</style>
   </ul>

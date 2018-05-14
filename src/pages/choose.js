@@ -5,7 +5,7 @@ import Layout from '../components/common/Layout'
 import Header from '../components/choose/Header'
 import Body from '../components/choose/Body'
 
-import rooms from '../data/rooms/ru'
+import rooms from '../data/rooms'
 
 moment.locale('ru')
 
@@ -64,14 +64,12 @@ class ChoosePage extends React.Component {
   render() {
     return (
       <Layout>
-        <div style={{ background: '#fafafa' }}>
-          <Header
-            guests={this.state.guests}
-            checkIn={this.state.checkIn}
-            checkOut={this.state.checkOut}
-          />
-          <Body rooms={rooms} addToCart={this.addToCart} />
-        </div>
+        <Header
+          guests={this.state.guests}
+          checkIn={this.state.checkIn}
+          checkOut={this.state.checkOut}
+        />
+        <Body rooms={rooms} addToCart={this.addToCart} />
       </Layout>
     )
   }
