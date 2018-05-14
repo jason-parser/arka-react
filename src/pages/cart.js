@@ -14,22 +14,23 @@ class CartPage extends React.Component {
   componentDidMount() {
     const roomsInCart = JSON.parse(localStorage.getItem('cart'))
 
-    const newRooms = rooms
-      .filter(room => roomsInCart.find(item => item.id == room.id))
-      .map(room => {
-        const cartRoom = roomsInCart.find(item => item.id == room.id)
-        if (cartRoom) {
-          return {
-            ...room,
-            amount: cartRoom.amount
+    if (roomsInCart) {
+      const newRooms = rooms
+        .filter(room => roomsInCart.find(item => item.id == room.id))
+        .map(room => {
+          const cartRoom = roomsInCart.find(item => item.id == room.id)
+          if (cartRoom) {
+            return {
+              ...room,
+              amount: cartRoom.amount
+            }
           }
-        }
-      })
+        })
 
-    this.setState(
-      prevState => ({ rooms: newRooms, loading: false }),
-      () => console.log(this.state.rooms)
-    )
+      this.setState(prevState => ({ rooms: newRooms, loading: false }))
+    } else {
+      this.setState(prevState => ({ loading: false }))
+    }
   }
 
   removeFromCart = id => {

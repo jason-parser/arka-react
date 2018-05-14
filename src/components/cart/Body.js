@@ -1,12 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import FaAngleLeft from 'react-icons/lib/fa/angle-left'
+
 import RoomsList from './RoomsList'
 import Button from '../common/Button'
 
 const Body = ({ rooms, removeFromCart }) => (
   <div className="container">
     <h1>Данные бронирования</h1>
+    <Link to="/choose">
+      <p className="back">
+        <FaAngleLeft size={18} />Вернуться к выбору номеров
+      </p>
+    </Link>
     <RoomsList rooms={rooms} removeFromCart={removeFromCart} />
 
     <div className="button-wrapper">
@@ -40,8 +47,12 @@ const Body = ({ rooms, removeFromCart }) => (
       }
 
       h1 {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         color: #666;
+      }
+
+      .back {
+        margin-bottom: 40px;
       }
 
       .button-wrapper {
