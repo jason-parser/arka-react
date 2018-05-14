@@ -53,6 +53,7 @@ const Body = ({ rooms, removeFromCart }) => (
 
       .back {
         margin-bottom: 40px;
+        font-size: 18px;
       }
 
       .button-wrapper {
