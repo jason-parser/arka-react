@@ -13,9 +13,6 @@ const RoomsList = ({ rooms, addToCart }) => (
         padding: 0;
         list-style: none;
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
         margin-bottom: 88px;
       }
     `}</style>
