@@ -102,6 +102,7 @@ class RoomsListItem extends React.Component {
                 width: 100%;
                 padding-top: 50%;
                 position: relative;
+                overflow: hidden;
               }
 
               .slide-bg {
