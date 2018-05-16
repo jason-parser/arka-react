@@ -8,6 +8,7 @@ const Body = ({
   handleCheckInChange,
   handleCheckOutChange,
   handleGuests,
+  handleRooms,
   handleSubmit
 }) => (
   <div className="container">
@@ -18,6 +19,7 @@ const Body = ({
         handleCheckInChange={handleCheckInChange}
         handleCheckOutChange={handleCheckOutChange}
         handleGuests={handleGuests}
+        handleRooms={handleRooms}
         handleSubmit={handleSubmit}
       />
       <Calendars />

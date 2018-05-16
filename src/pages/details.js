@@ -10,7 +10,8 @@ class DetailsPage extends React.Component {
   state = {
     guests: 1,
     checkIn: moment(),
-    checkOut: moment().add(1, 'days')
+    checkOut: moment().add(1, 'days'),
+    rooms: 1
   }
 
   componentDidMount() {
@@ -21,6 +22,7 @@ class DetailsPage extends React.Component {
 
       this.setState({
         guests: parseInt(details.guests, 10),
+        rooms: parseInt(details.rooms, 10),
         checkIn: moment(details.checkIn),
         checkOut: moment(details.checkOut)
       })
@@ -45,6 +47,12 @@ class DetailsPage extends React.Component {
     }))
   }
 
+  handleRooms = inc => {
+    this.setState(prevState => ({
+      rooms: prevState.rooms + inc
+    }))
+  }
+
   handleSubmit = () => {
     localStorage.setItem('details', JSON.stringify(this.state))
   }
@@ -58,6 +66,7 @@ class DetailsPage extends React.Component {
             handleCheckInChange={this.handleCheckInChange}
             handleCheckOutChange={this.handleCheckOutChange}
             handleGuests={this.handleGuests}
+            handleRooms={this.handleRooms}
             handleSubmit={this.handleSubmit}
           />
         </div>

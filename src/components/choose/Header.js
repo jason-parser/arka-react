@@ -29,7 +29,7 @@ const Header = ({ guests, checkIn, checkOut }) => (
 
       .container {
         width: 100%;
-        max-width: 798px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 30px 15px;
       }

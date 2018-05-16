@@ -12,8 +12,12 @@ const RoomsList = ({ rooms, addToCart }) => (
         margin: 0;
         padding: 0;
         list-style: none;
-        width: 100%;
         margin-bottom: 88px;
+        width: 100%;
+
+        @media (min-width: 1200px) {
+          width: 800px;
+        }
       }
     `}</style>
   </ul>

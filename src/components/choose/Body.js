@@ -1,8 +1,20 @@
 import React from 'react'
 
 import RoomsList from './RoomsList'
+import Sidebar from './Sidebar'
 
-const Body = ({ rooms, addToCart }) => (
+const Body = ({
+  rooms,
+  addToCart,
+  guests,
+  handleGuests,
+  checkIn,
+  handleCheckIn,
+  checkOut,
+  handleCheckOut,
+  roomsCount,
+  handleRooms
+}) => (
   <div className="container">
     <header>
       <h1>Номера</h1>
@@ -19,12 +31,24 @@ const Body = ({ rooms, addToCart }) => (
         )}₽
       </p>
     </header>
-    <RoomsList rooms={rooms} addToCart={addToCart} />
+    <div className="wrapper">
+      <Sidebar
+        guests={guests}
+        handleGuests={handleGuests}
+        checkIn={checkIn}
+        handleCheckIn={handleCheckIn}
+        checkOut={checkOut}
+        handleCheckOut={handleCheckOut}
+        rooms={roomsCount}
+        handleRooms={handleRooms}
+      />
+      <RoomsList rooms={rooms} addToCart={addToCart} />
+    </div>
 
     <style jsx>{`
       .container {
         width: 100%;
-        max-width: 798px;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -33,6 +57,19 @@ const Body = ({ rooms, addToCart }) => (
         justify-content: space-between;
         padding: 15px;
         margin-top: 40px;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 798px;
+        margin: 0 auto;
+        @media (min-width: 1200px) {
+          width: 1200px;
+          max-width: 1200px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
       }
 
       h1 {

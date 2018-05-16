@@ -21,6 +21,9 @@ class Inputs extends React.Component {
       if (name == 'adults' && this.props.details.guests > 0)
         this.props.handleGuests(-1)
 
+      if (name == 'rooms' && this.props.details.rooms > 0)
+        this.props.handleRooms(-1)
+
       return {
         [name]: prevState[name] - 1
       }
@@ -29,6 +32,8 @@ class Inputs extends React.Component {
 
   handleInc = name => {
     if (name == 'adults') this.props.handleGuests(1)
+
+    if (name == 'rooms') this.props.handleRooms(1)
 
     this.setState(prevState => ({
       [name]: prevState[name] + 1
@@ -41,6 +46,7 @@ class Inputs extends React.Component {
       handleCheckInChange,
       handleCheckOutChange,
       handleGuests,
+      handleRooms,
       handleSubmit
     } = this.props
 
@@ -100,7 +106,7 @@ class Inputs extends React.Component {
             <p>Количество номеров</p>
             <AmountInput
               name="rooms"
-              value={this.state.rooms}
+              value={details.rooms}
               handleInc={this.handleInc}
               handleDec={this.handleDec}
             />

@@ -9,14 +9,12 @@ import Button from '../common/Button'
 const Body = ({ rooms, removeFromCart }) => (
   <div className="container">
     <h1>Данные бронирования</h1>
-    <Link to="/choose">
-      <p className="back">
-        <FaAngleLeft size={18} />Вернуться к выбору номеров
-      </p>
-    </Link>
     <RoomsList rooms={rooms} removeFromCart={removeFromCart} />
 
-    <div className="button-wrapper">
+    <div className="buttons-wrapper">
+      <Link to="/choose" style={{ marginBottom: '30px', marginRight: '30px' }}>
+        <Button>Вернуться назад</Button>
+      </Link>
       <Link to="/user">
         <Button>Подтвердить</Button>
       </Link>
@@ -36,8 +34,6 @@ const Body = ({ rooms, removeFromCart }) => (
         padding: 15px;
         padding-top: 30px;
         padding-bottom: 50px;
-        display: flex;
-        flex-direction: column;
 
         @media (min-width: 768px) {
           padding: 30px;
@@ -47,20 +43,19 @@ const Body = ({ rooms, removeFromCart }) => (
       }
 
       h1 {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         color: #666;
       }
 
-      .back {
-        margin-bottom: 40px;
-        font-size: 18px;
-      }
-
-      .button-wrapper {
-        display: inline-block;
-        margin-left: auto;
+      .buttons-wrapper {
         margin-bottom: 60px;
-        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+          justify-content: space-between;
+          margin-right: 50px;
+        }
       }
     `}</style>
   </div>
