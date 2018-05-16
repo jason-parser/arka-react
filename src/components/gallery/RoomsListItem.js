@@ -2,6 +2,43 @@ import React from 'react'
 import Slider from 'react-slick'
 import { Link } from 'react-router-dom'
 
+const PrevArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{ ...style, display: 'block' }}
+    onClick={onClick}
+  >
+    <style jsx>{`
+      div {
+        z-index: 108;
+        left: 10px;
+
+        &::after {
+          display: none;
+        }
+      }
+    `}</style>
+  </div>
+)
+
+const NextArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{ ...style, display: 'block' }}
+    onClick={onClick}
+  >
+    <style jsx>{`
+      div {
+        right: 10px;
+
+        &::after {
+          display: none;
+        }
+      }
+    `}</style>
+  </div>
+)
+
 class RoomsListItem extends React.Component {
   state = {
     currentSlide: 0
@@ -14,7 +51,6 @@ class RoomsListItem extends React.Component {
   render() {
     const settings = {
       dots: false,
-      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -22,7 +58,9 @@ class RoomsListItem extends React.Component {
       autoplay: true,
       autoplaySpeed: 8000,
       easing: 'ease',
-      afterChange: this.handleChange
+      afterChange: this.handleChange,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
     }
 
     const { room } = this.props
