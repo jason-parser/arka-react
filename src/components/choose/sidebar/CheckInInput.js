@@ -12,7 +12,7 @@ const CheckInInput = ({ value, onClick }) => (
           .format('MMM')
           .substring(0, 3)}
       </span>
-      <img src="/wp-content/themes/hotelbooking/img/rooms-page/arrow-down.svg" />
+      <img src="/wp-content/plugins/nd-booking/assets/img/icons/icon-down-arrow-white.svg" />
     </div>
     <style jsx>{`
       .inputs {

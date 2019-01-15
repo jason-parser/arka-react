@@ -6,12 +6,12 @@ const NumberInput = ({ value, handleChange, isStatic }) => (
     {!isStatic && (
       <div className="controls">
         <img
-          src="/wp-content/themes/hotelbooking/img/rooms-page/arrow-down.svg"
+          src="/wp-content/plugins/nd-booking/assets/img/icons/icon-down-arrow-white.svg"
           className="reversed"
           onClick={() => handleChange(1)}
         />
         <img
-          src="/wp-content/themes/hotelbooking/img/rooms-page/arrow-down.svg"
+          src="/wp-content/plugins/nd-booking/assets/img/icons/icon-down-arrow-white.svg"
           onClick={() => {
             if (value > 1) {
               handleChange(-1)

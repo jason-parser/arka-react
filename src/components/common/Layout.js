@@ -7,7 +7,7 @@ const Layout = ({ children }) => (
     <div
       className="image"
       style={{
-        backgroundImage: `url('/wp-content/uploads/2018/01/IMG_2528.jpg')`
+        backgroundImage: `url('/wp-content/uploads/2019/01/IMG_2528.jpg')`
       }}
     />
     <div className="main-wrapper">{children}</div>

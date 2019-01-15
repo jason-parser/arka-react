@@ -89,7 +89,7 @@ class RoomsListItem extends React.Component {
           </a>
           <ul className="room__features">
             <li>
-              <img src="/wp-content/themes/hotelbooking/img/rooms-page/guests-icon.svg" />
+              <img src="/wp-content/plugins/nd-booking/assets/img/icons/icon-user-grey.svg" />
               <p>{room.guests}</p>
             </li>
           </ul>
@@ -100,19 +100,19 @@ class RoomsListItem extends React.Component {
             <ul className="room__icons">
               <li>
                 <img
-                  src="/wp-content/themes/hotelbooking/img/rooms-page/wifi.png"
+                  src="http://www.nicdarkthemes.com/themes/hotel/wp/demo/wp-content/uploads/2017/07/icon-18.png"
                   title="WIFI"
                 />
               </li>
               <li>
                 <img
-                  src="/wp-content/themes/hotelbooking/img/rooms-page/view.png"
+                  src="http://www.nicdarkthemes.com/themes/hotel/wp/demo/wp-content/uploads/2017/07/icon-18.png"
                   title="Номер с видом"
                 />
               </li>
               <li>
                 <img
-                  src="/wp-content/themes/hotelbooking/img/rooms-page/tv.png"
+                  src="http://www.nicdarkthemes.com/themes/hotel/wp/demo/wp-content/uploads/2017/07/icon-18.png"
                   title="TV"
                 />
               </li>
