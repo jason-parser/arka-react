@@ -99,22 +99,16 @@ class RoomsListItem extends React.Component {
           <div className="room__additional">
             <ul className="room__icons">
               <li>
-                <img
-                  src="http://www.nicdarkthemes.com/themes/hotel/wp/demo/wp-content/uploads/2017/07/icon-18.png"
-                  title="WIFI"
-                />
+                <img src="/wp-content/uploads/2019/01/wifi.png" title="WIFI" />
               </li>
               <li>
                 <img
-                  src="http://www.nicdarkthemes.com/themes/hotel/wp/demo/wp-content/uploads/2017/07/icon-18.png"
+                  src="/wp-content/uploads/2019/01/view.png"
                   title="Номер с видом"
                 />
               </li>
               <li>
-                <img
-                  src="http://www.nicdarkthemes.com/themes/hotel/wp/demo/wp-content/uploads/2017/07/icon-18.png"
-                  title="TV"
-                />
+                <img src="/wp-content/uploads/2019/01/tv.png" title="TV" />
               </li>
             </ul>
             <a href={room.link} className="room__button">
