@@ -52,7 +52,7 @@ const Sidebar = ({
       <div className="block">
         <strong>Детей</strong>
         <NumberInput
-          value={1}
+          value={0}
           handleChange={() => console.log('kids change')}
         />
       </div>
@@ -66,7 +66,7 @@ const Sidebar = ({
       .sidebar {
         background: #1c1c1c;
         width: 100%;
-        padding: 30px;
+        padding: 15px;
         flex-shrink: 0;
         margin-bottom: 40px;
         display: flex;
@@ -75,12 +75,18 @@ const Sidebar = ({
 
         @media (min-width: 1200px) {
           width: 370px;
+          padding: 30px;
         }
       }
 
       .wrapper {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+
+        @media (min-width: 1200px) {
+          justify-content: flex-start;
+        }
       }
 
       .block {
@@ -92,16 +98,19 @@ const Sidebar = ({
         justify-content: flex-start;
         align-items: center;
         padding-top: 30px;
-        margin-right: 30px;
-        margin-bottom: 30px;
+        margin-right: 15px;
+        margin-bottom: 15px;
         flex-shrink: 0;
 
-        &:last-child {
-          margin-right: 0;
-        }
-
         @media (min-width: 1200px) {
+          margin-right: 30px;
+          margin-bottom: 30px;
+
           &:nth-child(2n) {
+            margin-right: 0;
+          }
+
+          &:last-child {
             margin-right: 0;
           }
         }
